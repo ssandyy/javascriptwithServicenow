@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <!-- Array with for -->
+    <p id="Collages"></p>
+
+
+    <script>
+        const Collage = ["NMIET", "IIIT", "VIT", "IIT", "NIT", "MIT"];
+        let text = "<ul>";
+        for (let i = 0; i < Collage.length; i++) {
+            text += "<li>" + Collage[i] + "</li>"
+        }
+        text += "</ul>"
+
+        document.getElementById("Collages").innerHTML = text;
+    </script>
+
+    <!-- Array with for and 'of' -->
+    <p>Students by using 'For' and 'of' :</p>
+    <p id="Students"></p>
+
+    <script>
+        const std = [
+            { name: "Manu", age: 22 },
+            { name: "Sameer", age: 23 },
+            { name: "Devashish", age: 30 },
+            { name: "Vishal", age: 25 },
+            { name: "Mukesh", age: 22 }
+        ]
+        let text1 = "<ul>";
+        for (const x of std) {
+            text1 += "<li>" + x.name + " " + x.age + "</li>"
+        }
+        text1 += "</ul>"
+        document.getElementById("Students").innerHTML = text1;
+    </script>
+
+
+    <!-- Array with forEach -->
+    <p>Employee by forEach Loop: </p>
+    <p id="Employees"> </p>
+    <script>
+        const Employees = [
+            { name: "Sandeep", age: 22 },
+            { name: "Sameer", age: 23 },
+            { name: "Devashish", age: 30 },
+            { name: "Vishal", age: 25 },
+            { name: "Mukesh", age: 22 }
+        ]
+        let text2 = "<ul>";
+        Employees.forEach(function (x) {
+            text2 += "<li>" + x.name + " " + x.age + "</li>"
+        })
+        text2 += "</ul>"
+        document.getElementById("Employees").innerHTML = text2;
+    </script>
+</body>
+
+</html>
