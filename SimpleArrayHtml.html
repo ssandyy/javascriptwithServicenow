@@ -37,6 +37,29 @@
         document.getElementById("Students").innerHTML = text1;
     </script>
 
+    <br>
+    <Span>--------------------------- Array with for and 'of' --------------------------</Span>
+    <br>
+    <p>Children by forEach Loop: </p>
+    <p id="Children"> </p>
+    <script>
+        const Children = [
+            { name: "Sandeep", age: 22 },
+            { name: "Sameer", age: 23 },
+            { name: "Devashish", age: 30 },
+            { name: "Vishal", age: 25 },
+            { name: "Mukesh", age: 22 }
+        ]
+        let text3 = "<ul>";
+        Children.forEach(myfun);
+
+        function myfun(x) {
+            text3 += "<li>" + x.name + " " + x.age + "</li>"
+        }
+        text3 += "</ul>"
+        document.getElementById("Children").innerHTML = text3;
+    </script>
+
 
     <!-- Array with forEach -->
     <p>Employee by forEach Loop: </p>
@@ -56,6 +79,70 @@
         text2 += "</ul>"
         document.getElementById("Employees").innerHTML = text2;
     </script>
+    <br>
+    <Span>------------------------ Array With unshift() and shift() ---------------------------</Span>
+    <br>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo1").innerHTML = fruits + "  <-- Original Array Data..!";
+        fruits.shift();
+        document.getElementById("demo2").innerHTML = fruits + "  <-- Array after shift() Data..!";
+        fruits.unshift("Lemon");
+        document.getElementById("demo3").innerHTML = fruits + "  <-- Array after unshift() Data..!";
+    </script>
+
+    <br>
+    <Span>--------------------------- Array with push() and pop() -----------------------------------</Span>
+    <br>
+
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+
+    <script>
+        const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo4").innerHTML = fruits1 + "  <-- Original Array Data..!";
+        fruits1.pop();
+        document.getElementById("demo5").innerHTML = fruits1 + "  <-- Array after pop() Data..!";
+        fruits1.push("Lemon");
+        document.getElementById("demo6").innerHTML = fruits1 + "  <-- Array after push() Data..!";
+    </script>
+
+
+    <br>
+    <Span>------------------------- Array with splice() and slice() ----------------------------</Span>
+    <br>
+
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <script>
+        const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo7").innerHTML = fruits2 + "  <-- Original Array Data..!";
+        fruits2.splice(2, 1, "Lemon");
+        document.getElementById("demo8").innerHTML = fruits2 + "  <-- Array after splice() Data..!";
+    </script>
+
+    <p>The slice() method use to remove the elements from the array.</p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <script>
+        const phone = ["Samsung", "Iphone", "Vivo", "Realme", "Xiaomi", "OnePlus"];
+
+        document.getElementById("demo9").innerHTML = phone + "  <-- Original Array Data..!";
+        let a = phone.slice(2, 5);
+        document.getElementById("demo10").innerHTML = a + "  <-- Array after slice() Data..!";
+    </script>
+
+    <br>
+    <Span>-----------------------------------------------------------------------------------------------</Span>
+    <br>
+
+
 </body>
 
 </html>
